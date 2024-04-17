@@ -3,7 +3,7 @@ const pets = [
       id: 1,
       imageUrl: "http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg",
       name: "Dusty",
-      color: "Green",
+      color: "light-blue",
       specialSkill: "Gives sincere apologies.",
       type: "cat",
     },
@@ -244,9 +244,6 @@ const pets = [
     }
   ];
 
-  //TODO (TM): Replace all broken images with new ones. 
-  //TODO (TM): Find and replace 3 dog photos. 
-
   //This creates a function called render to dom that takes in a div id and somesort of html that will go where the selected div lives
   const renderToDom = (divId, htmlToRender) => {
   // Creates a const and uses a query selector to grab the div we want to target
@@ -269,9 +266,9 @@ const pets = [
       <h5 id="cardTitle" class="card-title">${pets.name}</h5>
       <img class="card-img-top" src="${pets.imageUrl}" alt="Card image cap" style="width: 100%;">
       <p>${pets.color}</p>
-        <p id="cardText"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p id="cardText" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <hr></hr>
-        <p>${pets.type}</p>
+        <div class="pet-type-id" >${pets.type}</div>
       </div>
   </div>
     `
@@ -291,7 +288,7 @@ const pets = [
   // while iterating checking if item in array is equal to the type of animal that we are looking for with typeOf
       if (item.type === typeOf) {
   // Pushes the newly assigned item to the array we selected
-        typeOfArray.push(item);
+        typeOfArray.push(item)
       }
     });
   
@@ -311,6 +308,7 @@ const pets = [
   // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "All Pets")
     cardsOnDom(pets);
+    document.body.style.background="blue"
   });
   
   // 3. Add click event to filter all the instructors whose favorite color is blue on button click
@@ -320,6 +318,7 @@ const pets = [
     // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "Cats");
     cardsOnDom(blueTeamMembers);
+    document.body.style.background="red"
   });
   
 
@@ -329,6 +328,7 @@ const pets = [
     // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "Dogs");
     cardsOnDom(blueTeamMembers);
+    document.body.style.background="yellow"
   });
 
  
@@ -339,6 +339,7 @@ const pets = [
     renderToDom("#type", "Dinos");
     // this takes in the newly filtered variable and uses it as an arugment to provide info to the boostrap card
     cardsOnDom(blueTeamMembers);
+    document.body.style.background="pink"
 
   });
 
