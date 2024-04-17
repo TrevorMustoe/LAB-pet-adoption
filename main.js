@@ -244,17 +244,25 @@ const pets = [
     }
   ];
 
-  
+  //TODO (TM): Replace all broken images with new ones. 
+
+  //This creates a function called render to dom that takes in a div id and somesort of html that will go where the selected div lives
   const renderToDom = (divId, htmlToRender) => {
+  // Creates a const and uses a query selector to grab the div we want to target
     const selectedDiv = document.querySelector(divId);
+  // Accessing the inner html of the selected div and setting it to be whatever html we need to render here
     selectedDiv.innerHTML = htmlToRender;
   };
   
   // get the cards on the DOM
   const cardsOnDom = (array) => {
+  // creates an emptys string where we can store this info
     let domString = "";
+  // for loop iterating through the pets array
     for (const pets of array) {
+  // adding the boostrap card to the empty string element
       domString += 
+  // boostrap card
       `<div class="card" id="card-container" >
       <div class="card-body">
       <h5 id="cardTitle" class="card-title">${pets.name}</h5>
@@ -268,60 +276,67 @@ const pets = [
     `
 
     }
-  
+  // calling the renderToDom function with the properties of the div app and the string element which now contains our card
     renderToDom("#app", domString);
   };
   
-  // function to filter animals with specific favorite color
+  // function to filter animals with specific favorite color this takes in an array and it takes in a string that we are checking
   const filter = (array, typeOf) => {
+  // creates anohter empty array to store our filterd items
     const typeOfArray= [];
   
+  // takes the array we added and iterates through
     array.forEach((item) => {
+  // while iterating checking if item in array is equal to the type of animal that we are looking for with typeOf
       if (item.type === typeOf) {
+  // Pushes the newly assigned item to the array we selected
         typeOfArray.push(item);
       }
     });
   
+    // returns the new array only containng the filtered items 
     return typeOfArray;
   };
   
   
-  // 2. Get only the teammates whose favorite color is blue on the DOM
-  
-  // ******************** //
-  // ****** EVENTS ****** //
-  // ******************** //
-  
-  // 1. Target both of the buttons on the DOM
+  // Targeting each button needed
   const showAllButton = document.querySelector("#show-btn");
   const catButton = document.querySelector("#cat-button");
   const dogButton = document.querySelector("#dog-button");
   const dinoButton = document.querySelector("#dino-button");
   
-  // 2. Add click event to show all the instuctors on button click using the function we created above
+  // show all button that shows all pets available
   showAllButton.addEventListener("click", () => {
+  // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "All Pets")
     cardsOnDom(pets);
   });
   
   // 3. Add click event to filter all the instructors whose favorite color is blue on button click
   catButton.addEventListener("click", () => {
+    // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "cat"
     const blueTeamMembers = filter(pets, "cat");
+    // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "Cats")
     cardsOnDom(blueTeamMembers);
   });
   
 
   dogButton.addEventListener("click", () => {
+     // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dog"
     const blueTeamMembers = filter(pets, "dog");
+    // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "Dogs")
     cardsOnDom(blueTeamMembers);
   });
 
  
   dinoButton.addEventListener("click", () => {
+    // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dino"
     const blueTeamMembers = filter(pets, "dino");
+    // this renders the type of pet we have selected at the top of the screen
     renderToDom("#type", "Dinos")
+    // this takes in the newly filtered variable and uses it as an arugment to provide info to the boostrap card
     cardsOnDom(blueTeamMembers);
   });
 
