@@ -135,12 +135,12 @@ const pets = [
      imageUrl: "http://www.funnycatsite.com/pictures/Close_Up_Yawn.jpg",
       name: "Muffin",
       color: "Yellow",
-      specialSkill: "Does not freak out if you haven’t seen his favorite movie (The Big Lebowski).",
+      specialSkill: "Does not freak out if you havent seen his favorite movie (The Big Lebowski).",
       type: "cat",
     },
     {
       id: 18,
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg";
+      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg",
       name: "Salem",
       color: "Brown",
       specialSkill: "Proficient in air guitar",
@@ -243,3 +243,57 @@ const pets = [
       type: "dino",
     }
   ];
+
+  
+  const renderToDom = (divId, htmlToRender) => { 
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = htmlToRender;
+  };
+
+  // Created an empty string to put the cards into
+  let domString = "";
+// boostrap card using
+  pets.forEach((pet) => {
+    domString += `<div>${pet.name} </div><br></br>`
+  renderToDom("#app", domString);
+  });
+
+
+  // create a filter that checks on the type of animal
+  const filter = (pets, typeOfAnimal) => {
+    const typeOfArray = [];
+  
+    pets.forEach((item) => {
+      if (item.type === typeOfAnimal) {
+        typeOfArray.push(item);
+      }
+    });
+  
+    console.log(typeOfArray)
+  };
+
+  // add in eventlistener to click on buttons to call the render to dom;
+
+  
+
+  
+  // this makes a const to store the button function
+
+  const showBlueButton = document.querySelector("#favorites");
+
+   //Eventlistener that calls a click on the show all buttons
+
+  showBlueButton.addEventListener("click", () => {
+    const blueTeamMembers = filter(team, "blue");
+    cardsOnDom(blueTeamMembers);
+  });
+  
+ 
+
+
+
+  
+
+
+
+  
