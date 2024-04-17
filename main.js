@@ -9,7 +9,7 @@ const pets = [
     },
     {
         id: 2,
-      imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2018/07/16/18/32/dinosaur-3542561_1280.jpg",
       name: "Trouble",
       color: "Brown",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
@@ -59,7 +59,7 @@ const pets = [
     },
     {
       id: 8,
-      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2019/09/14/05/49/dinosaur-4475295_1280.jpg",
       name: "Ginger",
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
@@ -84,7 +84,7 @@ const pets = [
     },
     {
       id: 11,
-      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600",
+      imageUrl: "https://cdn.pixabay.com/photo/2019/09/14/05/50/dinosaur-4475299_1280.jpg",
       name: "Coco",
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
@@ -124,7 +124,7 @@ const pets = [
     },
     {
       id: 16,
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2020/05/25/11/55/dinosaur-5218265_1280.jpg",
       name: "Smokey",
       color: "Brown",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
@@ -140,7 +140,7 @@ const pets = [
     },
     {
       id: 18,
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2017/09/10/13/06/pterosaur-2735500_1280.jpg",
       name: "Salem",
       color: "Brown",
       specialSkill: "Proficient in air guitar",
@@ -164,7 +164,7 @@ const pets = [
     },
     {
       id: 21,
-      imageUrl: "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715",
+      imageUrl: "https://cdn.pixabay.com/photo/2016/03/15/09/01/prehistoric-times-1257162_1280.jpg",
       name: "Miss kitty",
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
@@ -236,7 +236,7 @@ const pets = [
     },
     {
         id: 30,
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119",
+      imageUrl: "https://cdn.pixabay.com/photo/2022/10/02/18/33/dinosaur-7494195_1280.jpg",
       name: "Lucy",
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
@@ -245,6 +245,9 @@ const pets = [
   ];
 
   //TODO (TM): Replace all broken images with new ones. 
+  //TODO (TM): Find and replace 4 cat photos. 
+  //TODO (TM): Find and replace 3 dog photos. 
+  //TODO (TM): Find and replace 7 din0 photos. 
 
   //This creates a function called render to dom that takes in a div id and somesort of html that will go where the selected div lives
   const renderToDom = (divId, htmlToRender) => {
