@@ -35,7 +35,7 @@ const pets = [
     },
     {
       id: 5,
-      imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2016/04/25/10/57/cat-1351612_1280.jpg",
       name: "Spooky",
       color: "Brown",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
@@ -132,7 +132,7 @@ const pets = [
     },
     {
      id: 17,
-     imageUrl: "http://www.funnycatsite.com/pictures/Close_Up_Yawn.jpg",
+     imageUrl: "https://cdn.pixabay.com/photo/2018/05/09/21/47/cat-3386220_1280.jpg",
       name: "Muffin",
       color: "Yellow",
       specialSkill: "Does not freak out if you havent seen his favorite movie (The Big Lebowski).",
@@ -156,8 +156,8 @@ const pets = [
     },
     {
       id: 20,
-      imageUrl: "http://www.funnycatsite.com/pictures/Lazy_White_Cat.jpg",
-      name: "Spooky",
+      imageUrl: "https://cdn.pixabay.com/photo/2019/03/05/06/49/wink-4035665_1280.jpg",
+      name: "John",
       color: "Black",
       specialSkill: "Uses litter box at appropriate hours.",
       type: "cat",
@@ -172,7 +172,7 @@ const pets = [
     },
     {
         id: 22,
-        imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg",
+        imageUrl: "https://cdn.pixabay.com/photo/2013/10/17/20/27/cat-197175_1280.jpg",
       name: "Snuggles",
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
@@ -196,7 +196,7 @@ const pets = [
     },
     {
       id: 25,
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2017/02/28/12/59/cat-2105660_1280.jpg",
       name: "Salem",
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
@@ -320,7 +320,7 @@ const pets = [
     // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "cat"
     const blueTeamMembers = filter(pets, "cat");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Cats")
+    renderToDom("#type", "Cats");
     cardsOnDom(blueTeamMembers);
   });
   
@@ -329,7 +329,7 @@ const pets = [
      // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dog"
     const blueTeamMembers = filter(pets, "dog");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Dogs")
+    renderToDom("#type", "Dogs");
     cardsOnDom(blueTeamMembers);
   });
 
@@ -338,9 +338,10 @@ const pets = [
     // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dino"
     const blueTeamMembers = filter(pets, "dino");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Dinos")
+    renderToDom("#type", "Dinos");
     // this takes in the newly filtered variable and uses it as an arugment to provide info to the boostrap card
     cardsOnDom(blueTeamMembers);
+
   });
 
 
