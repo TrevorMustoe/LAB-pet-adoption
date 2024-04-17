@@ -245,46 +245,53 @@ const pets = [
   ];
 
   
-  const renderToDom = (divId, htmlToRender) => { 
+  const renderToDom = (divId, htmlToRender) => {
     const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = htmlToRender;
   };
-
-  // Created an empty string to put the cards into
-  let domString = "";
-// boostrap card using
-  pets.forEach((pet) => {
-    domString += `<div>${pet.name} </div><br></br>`
-  renderToDom("#app", domString);
-  });
-
-
-  // create a filter that checks on the type of animal
-  const filter = (pets, typeOfAnimal) => {
-    const typeOfArray = [];
   
-    pets.forEach((item) => {
-      if (item.type === typeOfAnimal) {
+  // get the cards on the DOM
+  const cardsOnDom = (array) => {
+    let domString = "";
+    for (const pets of array) {
+      domString += `<div>${pets.name} ${pets.type}</div>`
+    }
+  
+    renderToDom("#app", domString);
+  };
+  
+  // function to filter teammates with specific favorite color
+  const filter = (array, typeOf) => {
+    const typeOfArray= [];
+  
+    array.forEach((item) => {
+      if (item.type === typeOf) {
         typeOfArray.push(item);
       }
     });
   
-    console.log(typeOfArray)
+    return typeOfArray;
   };
-
-  // add in eventlistener to click on buttons to call the render to dom;
-
   
-
   
-  // this makes a const to store the button function
-
-  const showBlueButton = document.querySelector("#favorites");
-
-   //Eventlistener that calls a click on the show all buttons
-
-  showBlueButton.addEventListener("click", () => {
-    const blueTeamMembers = filter(team, "blue");
+  // 2. Get only the teammates whose favorite color is blue on the DOM
+  
+  // ******************** //
+  // ****** EVENTS ****** //
+  // ******************** //
+  
+  // 1. Target both of the buttons on the DOM
+  const showAllButton = document.querySelector("#show-btn");
+  const catButton = document.querySelector("#cat-button");
+  
+  // 2. Add click event to show all the instuctors on button click using the function we created above
+  showAllButton.addEventListener("click", () => {
+    cardsOnDom(pets);
+  });
+  
+  // 3. Add click event to filter all the instructors whose favorite color is blue on button click
+  catButton.addEventListener("click", () => {
+    const blueTeamMembers = filter(pets, "cat");
     cardsOnDom(blueTeamMembers);
   });
   
