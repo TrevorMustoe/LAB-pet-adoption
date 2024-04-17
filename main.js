@@ -254,13 +254,25 @@ const pets = [
   const cardsOnDom = (array) => {
     let domString = "";
     for (const pets of array) {
-      domString += `<div>${pets.name} ${pets.type}</div>`
+      domString += 
+      `<div class="card" id="card-container" >
+      <div class="card-body">
+      <h5 id="cardTitle" class="card-title">${pets.name}</h5>
+      <img class="card-img-top" src="${pets.imageUrl}" alt="Card image cap" style="width: 100%;">
+      <p>${pets.color}</p>
+        <p id="cardText"class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <hr></hr>
+        <p>${pets.type}</p>
+      </div>
+  </div>
+    `
+
     }
   
     renderToDom("#app", domString);
   };
   
-  // function to filter teammates with specific favorite color
+  // function to filter animals with specific favorite color
   const filter = (array, typeOf) => {
     const typeOfArray= [];
   
@@ -283,19 +295,35 @@ const pets = [
   // 1. Target both of the buttons on the DOM
   const showAllButton = document.querySelector("#show-btn");
   const catButton = document.querySelector("#cat-button");
+  const dogButton = document.querySelector("#dog-button");
+  const dinoButton = document.querySelector("#dino-button");
   
   // 2. Add click event to show all the instuctors on button click using the function we created above
   showAllButton.addEventListener("click", () => {
+    renderToDom("#type", "All Pets")
     cardsOnDom(pets);
   });
   
   // 3. Add click event to filter all the instructors whose favorite color is blue on button click
   catButton.addEventListener("click", () => {
     const blueTeamMembers = filter(pets, "cat");
+    renderToDom("#type", "Cats")
     cardsOnDom(blueTeamMembers);
   });
   
+
+  dogButton.addEventListener("click", () => {
+    const blueTeamMembers = filter(pets, "dog");
+    renderToDom("#type", "Dogs")
+    cardsOnDom(blueTeamMembers);
+  });
+
  
+  dinoButton.addEventListener("click", () => {
+    const blueTeamMembers = filter(pets, "dino");
+    renderToDom("#type", "Dinos")
+    cardsOnDom(blueTeamMembers);
+  });
 
 
 
