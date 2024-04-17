@@ -100,7 +100,7 @@ const pets = [
     },
     {
       id: 13,
-      imageUrl: "http://1kjkdg1axrkd2g03cnboj761.wpengine.netdna-cdn.com/wp-content/uploads/2017/12/braydon-anderson-105552-e1512684107659.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2020/12/01/10/04/dog-5793625_1280.jpg",
       name: "Chester",
       color: "Red",
       specialSkill: "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
@@ -148,7 +148,7 @@ const pets = [
     },
     {
       id: 19,
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg",
+      imageUrl: "	https://cdn.pixabay.com/photo/2014/04/05/11/40/dog-316598_1280.jpg",
       name: "Callie",
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
@@ -188,7 +188,7 @@ const pets = [
     },
     {
         id: 24,
-      imageUrl: "http://www.dogbreedplus.com/dog_breeds/images/basset-hound-4.jpg",
+      imageUrl: "https://cdn.pixabay.com/photo/2023/08/11/03/35/deer-8182756_1280.jpg",
       name: "George",
       color: "Brown",
       specialSkill: "Participates in karaoke but does not force others to go out to karaoke.",
@@ -245,9 +245,7 @@ const pets = [
   ];
 
   //TODO (TM): Replace all broken images with new ones. 
-  //TODO (TM): Find and replace 4 cat photos. 
   //TODO (TM): Find and replace 3 dog photos. 
-  //TODO (TM): Find and replace 7 din0 photos. 
 
   //This creates a function called render to dom that takes in a div id and somesort of html that will go where the selected div lives
   const renderToDom = (divId, htmlToRender) => {
