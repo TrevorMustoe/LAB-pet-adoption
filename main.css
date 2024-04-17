@@ -1,3 +1,7 @@
+/*TODO (TM): Add in color to bottom Type Of section*/
+/*TODO (TM): Center eveything in the card*/
+
+
 #cardText{
   color: red
 }
@@ -21,7 +25,7 @@
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 20px;
-  border: 3px orchid solid;
+  border: solid black 3px;
   justify-content: space-around;
   margin-top: 30px;
 }
@@ -32,10 +36,15 @@
   margin-top: 60px;
 }
 
-.button{
-  margin-left: 5px;
-  margin-right: 5px;
+#show-btn,
+#cat-button,
+#dog-button,
+#dino-button{
+  margin-right: 10px;
+  margin-left: 10px;
 }
+
+
 
 .type-text{
   color:red;
