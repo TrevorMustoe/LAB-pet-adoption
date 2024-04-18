@@ -268,11 +268,10 @@ const pets = [
       <p>${pets.color}</p>
         <p id="cardText" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <hr></hr>
-        <div class="pet-type-id" >${pets.type}</div>
+        <div id="pet-type-id" class="pet-type-id" >${pets.type}</div>
       </div>
   </div>
     `
-
     }
   // calling the renderToDom function with the properties of the div app and the string element which now contains our card
     renderToDom("#app", domString);
@@ -306,9 +305,9 @@ const pets = [
   // show all button that shows all pets available
   showAllButton.addEventListener("click", () => {
   // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "All Pets")
+    renderToDom("#type", "ALL PETS")
     cardsOnDom(pets);
-    document.body.style.background="blue"
+    document.body.style.background="lightgrey"
   });
   
   // 3. Add click event to filter all the instructors whose favorite color is blue on button click
@@ -316,9 +315,9 @@ const pets = [
     // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "cat"
     const blueTeamMembers = filter(pets, "cat");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Cats");
+    renderToDom("#type", "CATS");
     cardsOnDom(blueTeamMembers);
-    document.body.style.background="red"
+    document.body.style.background="lightblue"
   });
   
 
@@ -326,9 +325,9 @@ const pets = [
      // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dog"
     const blueTeamMembers = filter(pets, "dog");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Dogs");
+    renderToDom("#type", "DOGS");
     cardsOnDom(blueTeamMembers);
-    document.body.style.background="yellow"
+    document.body.style.background="lightgreen"
   });
 
  
@@ -336,10 +335,10 @@ const pets = [
     // this creates a new variable that calls the filter function and passes in the pets array and checking for the string "dino"
     const blueTeamMembers = filter(pets, "dino");
     // this renders the type of pet we have selected at the top of the screen
-    renderToDom("#type", "Dinos");
+    renderToDom("#type", "DINOS");
     // this takes in the newly filtered variable and uses it as an arugment to provide info to the boostrap card
     cardsOnDom(blueTeamMembers);
-    document.body.style.background="pink"
+    document.body.style.background="goldenrod"
 
   });
 
