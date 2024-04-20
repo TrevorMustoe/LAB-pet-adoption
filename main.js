@@ -264,7 +264,7 @@ const pets = [
       `<div class="card" id="card-container" >
       <div class="card-body">
       <h5 id="cardTitle" class="card-title">${pets.name}</h5>
-      <img class="card-img-top" src="${pets.imageUrl}" alt="img not here lol" style="width: 100%;">
+      <img class="card-img-top" src="${pets.imageUrl}" alt="pet picture" style="width: 100%;">
       <p>${pets.color}</p>
         <p id="cardText" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <hr></hr>
