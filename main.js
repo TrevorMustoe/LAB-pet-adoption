@@ -258,7 +258,7 @@ const pets = [
     let domString = "";
   // for loop iterating through the pets array
     for (const pets of array) {
-  // adding the boostrap card to the empty string element
+  // adding the boostrap card to the empty string elements
       domString += 
   // boostrap card
       `<div class="card" id="card-container" >
